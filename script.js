@@ -12,6 +12,15 @@ function showScreen(id) {
         behavior: "smooth"
     });
 }
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function startMusic() {
+
+    music.play().catch(() => {});
+
+    document.removeEventListener("click", startMusic);
+
+});
 document
 .getElementById("to-love-letter")
 .addEventListener("click", () => {
